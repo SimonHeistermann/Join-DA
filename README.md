@@ -32,7 +32,7 @@ npx live-server
 **Join** can be easily deployed using **Firebase Hosting** or any static hosting service like **GitHub Pages** or **Netlify**.
 
 ## 🤝 Contributing
-Feel free to **fork** this repository, **submit issues**, or **open pull requests** to improve the project!
+Feel free to **fork** this repository!
 
 ## 📜 License
 This project is licensed under the **MIT License**.
