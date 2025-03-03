@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_dark.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_white.svg" media="(prefers-color-scheme: dark)">
+
+    <title>Summary</title>
+
+    <link rel="stylesheet" href="./assets/fonts/fonts.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./styles/keyframes.css"/>
+    <link rel="stylesheet" href="./styles/sidebar.css"/>
+    <link rel="stylesheet" href="./styles/standard.css"/>
+    <link rel="stylesheet" href="./styles/assets.css"/>
+    <link rel="stylesheet" href="./styles/summary.css"/>
+    <link rel="stylesheet" href="./styles/summary_mobile.css"/>
+
+    <script src="./script.js"></script>
+    <script src="./scripts/templates_add_task.js"></script>
+    <script src="./scripts/templates_board.js"></script>
+    <script src="./scripts/templates_contacts_summary.js"></script>
+    <script src="./scripts/summary.js"></script>
+    <script src="./scripts/assets.js"></script>
+</head>
+<body id="body" onload="initSummary()">
+    <div class="overall">
+        <div class="sidebar">
+            <div class="sidebar__container">
+                <div onclick="reloadWebsite()" class="sidebar__logocontainer">
+                    <img src="./assets/icons/logo_sidebar.png" alt="Join Logo">
+                </div>
+                <div class="sidebar__navbarcontainer">
+                    <div class="sidebar__navbar">
+                        <div class="behind__sidebarbuttons sidebarbutton__open">
+                            <button onclick="reloadWebsite()" class="sidebar__button sidebarbutton__open">
+                                <img src="./assets/icons/summary_icon_white.png" alt="Summary">
+                                Summary
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openAddTaskWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/add_task_icon_white.png" alt="Add Task">
+                                Add Task
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openBoardWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/board_icon_white.png" alt="Board">
+                                Board
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openContactsWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/contacts_icon_white.png" alt="Contacts">
+                                Contacts
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sidebar__noticescontainer">
+                        <div class="behind__noticesbuttons">
+                            <button onclick="openPrivacyPolicyWebsite()" class="notices__button">Privacy Policy</button>
+                        </div>
+                        <div class="behind__noticesbuttons">
+                            <button onclick="openLegalNoticeWebsite()" class="notices__button">Legal notice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content__right">
+            <header>
+                <div class="header__container">
+                    <h3>Kanban Project Management Tool</h3>
+                    <div class="headerbox__right">
+                        <button  onclick="openHelpWebsite('summary')" class="help__button">
+                            <img src="./assets/icons/help_icon.png" alt="Help">
+                        </button>
+                        <button onclick="toggleSubMenu()" id="currentuser_initials_ref" class="profile__button"></button>
+                        <div id="submenu" class="profile__button__submenu d__none">
+                            <button onclick="openHelpWebsite('summary')" class="submenu__button__help">Help</button>
+                            <button onclick="openLegalNoticeWebsite()" class="submenu__button">Legal Notice</button>
+                            <button onclick="openPrivacyPolicyWebsite()" class="submenu__button">Privacy Policy</button>
+                            <button onclick="logOut()" class="submenu__button">Log Out</button>
+                        </div>
+                        <div onclick="toggleSubMenu()" class="overlay__submenu d__none" id="overlay_submenu"></div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div id="summary_headlinebox" class="summary__headlinebox d__none">
+                    <h1>Join 360</h1>
+                    <div class="headline__seperator"></div>
+                    <h2>Key Metrics at a Glance</h2>
+                    <div class="headline__seperator__mobile"></div>
+                </div>
+                <div class="summary__content" id="summary_content">
+                    
+                </div>
+            </main>
+            <div class="greet__overlay__mobile d__none" id="greet_overlay_mobile"></div>
+        </div>
+    </div>
+    <div id="rotate_message" class="rotate__overlay d__none">
+        <h1>Please rotate your device to portrait mode.</h1>
+    </div>
+</body>
+</html>

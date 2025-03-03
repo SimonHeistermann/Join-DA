@@ -1,0 +1,66 @@
+@media(max-width: 768px) {
+    .header__container {
+        position: relative;
+        flex-direction: row;
+    }
+
+    .register__container {
+        height: 595px;
+    }
+}
+
+@media(max-width: 650px) {
+    .back__button {
+        right: 48px;
+        top: 8px;
+    }
+}
+
+@media(max-width: 428px) {
+    main {
+        padding-inline: 16px;
+        margin-top: 32px;
+    }
+
+    .register__logocontainer img {
+        height: 78px;
+        width: 64px;
+    }
+
+    .register__container {
+        margin-top: 0;
+        width: min(100%, 396px);
+        height: 595px;
+        padding: 32px 16px;
+    }
+
+    h1 {
+        font-size: 47px;
+    }
+
+    .register__seperator {
+        width: 88px;
+    }
+
+    .back__button {
+        right: 32px;
+    }
+
+    .person__container, .email__container, .password__container {
+        height: 50px;
+    }
+
+    .signup__button {
+        height: 51px;
+        font-size: 16px;
+        width: 180px;
+    }
+
+    .footer__container {
+        gap: 16px;
+    }
+
+    .signed__up__notification__active {
+        transform: translateY(-1225px);
+    }
+}

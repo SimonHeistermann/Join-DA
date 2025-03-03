@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_dark.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_white.svg" media="(prefers-color-scheme: dark)">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="./assets/fonts/fonts.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./styles/keyframes.css"/>
+    <link rel="stylesheet" href="./styles/standard.css"/>
+    <link rel="stylesheet" href="./styles/assets.css"/>
+    <link rel="stylesheet" href="./styles/login.css"/>
+    <link rel="stylesheet" href="./styles/login_mobile.css"/>
+
+    <script src="./script.js"></script>
+    <script src="./scripts/templates_add_task.js"></script>
+    <script src="./scripts/templates_board.js"></script>
+    <script src="./scripts/templates_contacts_summary.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/assets.js"></script>
+</head>
+<body id="body" onload="initLogin()">
+    <div class="overlay" id="overlay"></div>
+    <div class="biglogo__div" id="biglogo_div">
+        <img class="big__logo" id="big_logo" src="./assets/icons/big_logo_icon.png" alt="Join Logo">
+    </div>
+    <header>
+        <div class="header__container">
+            <div class="login__logocontainer" id="small_logo_container" onclick="openLoginWithAnimation()">
+                <img id="small_logo" src="./assets/icons/join_logo_login.png" alt="Join Logo">
+            </div>
+            <div class="header__buttonbox">
+                <button onclick="openSignUpWebsite()" class="notajoinuser__button"><h3>Not a Join user?</h3></button>
+                <button onclick="openSignUpWebsite()" class="signup__button">Sign up</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form class="login__container" id="login_form" onsubmit="handleLoginForm(event)">
+            <div class="login__headlinebox">
+                <h1>Log in</h1>
+                <div class="login__seperator"></div>
+            </div>
+            <div class="login__inputbox">
+                <div class="email__container" id="email_container_login">
+                    <input class="email__input" id="email_input_login" type="text" placeholder="Email" autocomplete="email">
+                    <label for="email_input_login">
+                        <img class="email__logo" src="./assets/icons/mail_icon_gray.png" alt="Email Icon">
+                    </label>
+                </div>
+                <div class="password__box">
+                    <div class="password__container" id="password_container_login">
+                        <input class="password__input" id="password_input_login" type="password" placeholder="Password" autocomplete="current-password" oninput="maskPassword('password_input_login','mask_input_password_login')">
+                        <div id="mask_input_password_login" class="mask__input zero__opacity"></div>
+                        <label for="password_input_login">
+                            <img class="lock__icon" src="./assets/icons/lock_icon_gray.png" alt="Lock Icon">
+                            <img class="novisibility__icon" src="./assets/icons/visibility_off_icon_gray.png" alt="No Visibility Icon">
+                            <img class="visibility__icon" src="./assets/icons/eye_icon_gray.png" alt="Visibility Icon">
+                        </label>
+                    </div>
+                    <div class="errormessage__box" id="error_message_box_login">
+                    </div>
+                </div>
+            </div>
+            <div class="login__buttonbox">
+                <button type="submit" class="login__button">Log in</button>
+                <button onclick="guestLogIn(event)" class="guestlogin__button">Guest Log in</button>
+            </div>
+        </form>
+        <div class="header__buttonbox__mobile">
+            <button onclick="openSignUpWebsite()" class="notajoinuser__button"><h3>Not a Join user?</h3></button>
+            <button onclick="openSignUpWebsite()" class="signup__button">Sign up</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__container">
+            <button onclick="openPrivacyPolicyWebsiteNoLogin()" class="notices__button leftfooter__button">Privacy Policy</button>
+            <button onclick="openLegalNoticeWebsiteNoLogin()" class="notices__button rightfooter__button">Legal notice</button>
+        </div>
+    </footer>
+    <div id="rotate_message" class="rotate__overlay d__none">
+        <h1>Please rotate your device to portrait mode.</h1>
+    </div>
+</body>
+</html>

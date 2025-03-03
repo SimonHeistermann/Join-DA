@@ -1,0 +1,195 @@
+.sidebar {
+    z-index: 1200;
+    min-height: 100vh;
+    background-color: #2A3647;
+    width: clamp(172px, 17vw, 232px);
+    position: relative;
+    left: 0;
+
+}
+
+.sidebar__container {
+    width: clamp(172px, 17vw, 232px);
+    position: fixed;
+    padding: 48px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    max-height: 100vh;
+    gap: 120px;
+}
+
+.sidebar__logocontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sidebar__navbarcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar__navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+}
+
+.behind__sidebarbuttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 125ms;
+}
+
+.behind__sidebarbuttons:hover {
+    background-color: #2A3D59;
+}
+
+.sidebar__button {
+    width: 122px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    height: 46px;
+    opacity: 0.745;
+    transition: background-color 125ms
+}
+
+.sidebar__button:hover {
+    background-color: #2A3D59;
+}
+
+.sidebar__button img {
+    height: 30px;
+    width: 30px;
+}
+
+.sidebarbutton__open {
+    background-color: #091931;
+    opacity: 1;
+}
+
+.sidebarbutton__open:hover {
+    background-color: #091931;
+}
+
+.sidebar__noticescontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.notices__button {
+    font-size: 16px;
+    font-weight: 400;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #A8A8A8;
+    transition: color 125ms, font-weight 75ms ease-in;
+}
+
+.notices__button:hover {
+    color: #29ABE2;
+    font-weight: 700;
+}
+
+.notices__buttonopen {
+    color: #A8A8A8;
+    background-color: #091931;
+    height: 36px;
+}
+
+.notices__buttonopen:hover {
+    background-color: #091931;
+    color: #A8A8A8;
+    font-weight: 400;
+}
+
+.behind__noticesbuttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 768px) {
+    .sidebar {
+        min-height: unset;
+        height: 80px;
+        width: min(100%, 768px);
+        position: fixed;
+        bottom: 0;
+    }
+
+    .sidebar__container {
+        width: min(100%, 768px);
+        flex-direction: row;
+        position: unset;
+        gap: 0px;
+        height: 80px;
+        max-height: unset;
+        padding: 0;
+    }
+
+    .sidebar__logocontainer {
+        display: none;
+    }
+
+    .sidebar__navbarcontainer {
+        flex-direction: row;
+        justify-content: unset;
+        align-items: center;
+    }
+
+    .sidebar__navbar {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0px;
+    }
+
+    .sidebar__noticescontainer {
+        display: none;
+    }
+
+    .behind__sidebarbuttons {
+        width: 76px;
+        height: 76px;
+        border-radius: 8px;
+    }
+
+    .sidebar__button {
+        font-size: 14px;
+        flex-direction: column;
+        gap: 4px;
+        height: 76px;
+        justify-content: center;
+        width: 76px;
+        border-radius: 8px;
+    }
+
+    .sidebar__button img {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+
+

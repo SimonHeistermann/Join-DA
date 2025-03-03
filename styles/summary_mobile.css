@@ -1,0 +1,353 @@
+@media(max-width: 1279px) {
+    .summary__headlinebox {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .headline__seperator {
+        display: none;
+    }
+
+    .headline__seperator__mobile {
+        background-color: #29ABE2;
+        border-radius: 3px;
+        border: solid 1px #29ABE2;
+        width: 120px;
+    }
+
+    .summary__content {
+        gap: 24px;
+        flex-direction: column-reverse;
+    }
+
+    .greet__box {
+        flex: unset;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .thirdrow__keymetrics {
+        justify-content: flex-start;
+    }
+
+}
+
+@media(max-width: 768px) {
+    .greet__box {
+        display: none;
+    }
+
+    .greet__overlay__mobile {
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F6F7F8;
+        width: 100%;
+        height: calc(100vh - 80px);
+        opacity: 1;
+        transition: opacity 125ms ease-out;
+    }
+
+    .greet__overlay__mobile__deactive {
+        opacity: 0;
+    }
+
+    .greet__box__mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        opacity: 0;
+        transition: opacity 125ms ease-in;
+    }
+
+    .greet__box__mobile__active {
+        opacity: 1;
+    }
+
+    main {
+        margin-top: 80px;
+        margin-bottom: 0px;
+        max-height: calc(100vh - 80px);
+        overflow-x: hidden;
+        width: min(100%, 768px);
+    }
+
+    .summary__headlinebox {
+        margin-top: 40px;
+    }
+
+    .summary__content {
+        margin-bottom: 120px;
+    }
+}
+
+@media(max-width: 650px) {
+    .greeting {
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .greeting__name {
+        font-size: 47px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 47px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .firstrow__behindbox {
+        width: min(100%, 202px);
+        height: 126px;
+    }
+
+    .keymetrics__todo {
+        width: min(100%, 186px);
+        height: 110px;
+    }
+
+    .keymetrics__todo:hover {
+        width: min(100%, 202px);
+        height: 126px;
+    }
+
+    .keymetrics__box {
+        border-radius: 20px;
+    }
+
+    .keymetrics__done {
+        width: min(100%, 186px);
+        height: 110px;
+    }
+
+    .keymetrics__done:hover {
+        width: min(100%, 202px);
+        height: 126px;
+    }
+
+    .done__icon, .todo__icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .todo__icon img {
+        height: 17px;
+        width: 17px;
+    }
+
+    .done__icon img {
+        height: 13px;
+        width: 17px;
+    }
+
+    .keymetrics__number {
+        font-size: 47px;
+        font-weight: 600;
+    }
+
+    .keymetrics__text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .secondrow__behindbox {
+        width: min(100%, 412px);
+        height: 126px;
+    }
+
+    .keymetrics__urgent {
+        width: min(100%, 396px);
+        height: 110px;
+        gap: 16px;
+    }
+
+    .keymetrics__urgent:hover {
+        width: min(100%, 412px);
+        height: 126px;
+    }
+
+    .urgent__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .urgent__icon img {
+        width: 23px;
+        height: 17px;
+    }
+
+    .urgent__seperator {
+        height: 68px;
+    }
+
+    .urgent__textboxright {
+        gap: 8px;
+    }
+
+    .urgent__date {
+        font-size: 16px;
+    }
+
+    .thirdrow__behindbox {
+        width: min(100%, 132px);
+        height: 132px;
+    }
+
+    .keymetrics__lastrow {
+        width: min(100%, 116px);
+        height: 116px;
+    }
+
+    .keymetrics__lastrow:hover {
+        width: min(100%, 132px);
+        height: 132px;
+    }
+
+    .keymetrics__textthirdrow {
+        font-size: 14px;
+        font-weight: 400;
+        width: 59px;
+        height: 34px;
+    }
+}
+
+@media(max-width: 428px) {
+    main {
+        padding-inline: 8px;
+    }
+
+    h1 {
+        font-size: 47px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .firstrow__behindbox {
+        width: min(100%, 194px);
+        height: 114px;
+    }
+
+    .keymetrics__todo {
+        width: min(100%, 178px);
+        height: 102px;
+    }
+
+    .keymetrics__todo:hover {
+        width: min(100%, 194px);
+        height: 114px;
+    }
+
+    .keymetrics__box {
+        border-radius: 20px;
+    }
+
+    .keymetrics__done {
+        width: min(100%, 178px);
+        height: 102px;
+    }
+
+    .keymetrics__done:hover {
+        width: min(100%, 194px);
+        height: 114px;
+    }
+
+    .done__icon, .todo__icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .todo__icon img {
+        height: 17px;
+        width: 17px;
+    }
+
+    .done__icon img {
+        height: 13px;
+        width: 17px;
+    }
+
+    .keymetrics__number {
+        font-size: 47px;
+        font-weight: 600;
+    }
+
+    .keymetrics__text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .secondrow__behindbox {
+        width: min(100%, 402px);
+        height: 118px;
+    }
+
+    .keymetrics__urgent {
+        width: min(100%, 388px);
+        height: 102px;
+        gap: 16px;
+    }
+
+    .keymetrics__urgent:hover {
+        width: min(100%, 402px);
+        height: 118px;
+    }
+
+    .urgent__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .urgent__icon img {
+        width: 23px;
+        height: 17px;
+    }
+
+    .urgent__seperator {
+        height: 68px;
+    }
+
+    .urgent__textboxright {
+        gap: 8px;
+    }
+
+    .urgent__date {
+        font-size: 16px;
+    }
+
+    .thirdrow__behindbox {
+        width: min(100%, 124px);
+        height: 124px;
+    }
+
+    .keymetrics__lastrow {
+        width: min(100%, 108px);
+        height: 108px;
+    }
+
+    .keymetrics__lastrow:hover {
+        width: min(100%, 124px);
+        height: 124px;
+    }
+
+    .keymetrics__textthirdrow {
+        font-size: 14px;
+        font-weight: 400;
+        width: 59px;
+        height: 34px;
+    }
+}

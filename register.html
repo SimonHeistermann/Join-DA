@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_dark.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_white.svg" media="(prefers-color-scheme: dark)">
+
+    <title>Sign up</title>
+
+    <link rel="stylesheet" href="./assets/fonts/fonts.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./styles/keyframes.css"/>
+    <link rel="stylesheet" href="./styles/standard.css"/>
+    <link rel="stylesheet" href="./styles/assets.css"/>
+    <link rel="stylesheet" href="./styles/register.css"/>
+    <link rel="stylesheet" href="./styles/register_mobile.css"/>
+
+    <script src="./script.js"></script>
+    <script src="./scripts/templates_add_task.js"></script>
+    <script src="./scripts/templates_board.js"></script>
+    <script src="./scripts/templates_contacts_summary.js"></script>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/assets.js"></script>
+</head>
+<body id="body" class="body__register" onload="initRegister()">
+    <header>
+        <div class="header__container">
+            <div class="register__logocontainer" id="small_logo_container" onclick="reloadWebsite()">
+                <img id="small_logo" src="./assets/icons/join_logo_login.png" alt="Join Logo">
+            </div>
+        </div>
+    </header>
+    <main>
+        <form id="sign_up_form" class="register__container" onsubmit="handleRegisterForm(event)">
+                <div class="register__headlinecontainer">
+                    <button class="back__button" onclick="backToLogin(event)">
+                        <img class="thin__back__button" src="./assets/icons/arrow_left_icon_light_blue_thin.png" alt="Arrow Left">
+                        <img class="thick__back__button" src="./assets/icons/arrow_left_icon_light_blue_thick.png" alt="Arrow Left">
+                    </button>
+                    <div class="register__headlinebox">
+                        <h1>Sign up</h1>
+                        <div class="register__seperator"></div>
+                    </div>
+                </div>
+            <div class="register__inputbox">
+                <div class="register__inputbox">
+                    <div class="person__container" id="person_container_register">
+                        <input class="person__input" id="person_input_register" type="text" name="person_input_register" placeholder="Name">
+                        <label for="person_input_register">
+                            <img class="person__logo" src="./assets/icons/person_icon_gray.png" alt="Person Icon">
+                        </label>
+                    </div>
+                    <div class="email__container" id="email_container_register">
+                        <input class="email__input" id="email_input_register" type="text" name ="email_input_register" placeholder="Email" autocomplete="email">
+                        <label for="email_input_register">
+                            <img class="email__logo" src="./assets/icons/mail_icon_gray.png" alt="Email Icon">
+                        </label>
+                    </div>
+                    <div class="password__container" id="password_container_register">
+                        <input class="password__input" id="password_input_register" name="password_input_register" type="password" name="pw" placeholder="Password" autocomplete="current-password" oninput="maskPassword('password_input_register', 'mask_input_password')">
+                        <div id="mask_input_password" class="mask__input zero__opacity"></div>
+                        <label for="password_input_register">
+                            <img class="lock__icon" src="./assets/icons/lock_icon_gray.png" alt="Lock Icon">
+                            <img class="novisibility__icon" src="./assets/icons/visibility_off_icon_gray.png" alt="No Visibility Icon">
+                            <img class="visibility__icon" src="./assets/icons/eye_icon_gray.png" alt="Visibility Icon">
+                        </label>
+                    </div>
+                </div>
+                <div class="password__box">
+                    <div class="password__container" id="cofirm_password_container_register">
+                        <input class="password__input" id="confirm_password_input_register" name="confirm_password_input_register" type="password" placeholder="Confirm Password" autocomplete="current-password" oninput="maskPassword('confirm_password_input_register', 'mask_input_confirmation')">
+                        <div id="mask_input_confirmation" class="mask__input zero__opacity"></div>
+                        <label for="confirm_password_input_register">
+                            <img class="lock__icon" src="./assets/icons/lock_icon_gray.png" alt="Lock Icon">
+                            <img class="novisibility__icon" src="./assets/icons/visibility_off_icon_gray.png" alt="No Visibility Icon">
+                            <img class="visibility__icon" src="./assets/icons/eye_icon_gray.png" alt="Visibility Icon">
+                        </label>
+                    </div>
+                    <div class="errormessage__box" id="register_errormessage_box"></div>
+                </div>
+                <div class="checkbox__wrapper">
+                    <label for="agree_privacy_policy_register" class="register__checkbox__container">
+                        <input class="register__checkbox" type="checkbox" id="agree_privacy_policy_register" name="agree_privacy_policy_register">
+                        <span class="custom__checkbox"></span>
+                    </label>
+                    <span class="register__checkbox__text">I accept the <a class="privacy__policy__registertext" href="privacy_policy_nologin.html">Privacy policy</a></span>
+                </div>
+            </div>
+            <div class="register__buttonbox">
+                <button type="submit" class="signup__button" id="signup_button">Sign up</button>
+            </div>
+        </form>
+        <!--Signed up notification overlay-->
+        <div class="signed__up__notification" id="signed_up_notification">
+            <h3>You Signed Up successfully</h3> 
+        </div>
+    </main>
+    <div class="overlay__signed__up d__none" id="overlay_signed_up"></div>
+    <footer>
+        <div class="footer__container">
+            <button onclick="openPrivacyPolicyWebsiteNoLogin()" class="notices__button leftfooter__button">Privacy Policy</button>
+            <button onclick="openLegalNoticeWebsiteNoLogin()" class="notices__button rightfooter__button">Legal notice</button>
+        </div>
+    </footer>
+    <div id="rotate_message" class="rotate__overlay d__none">
+        <h1>Please rotate your device to portrait mode.</h1>
+    </div>
+</body>
+</html>
+

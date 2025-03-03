@@ -1,0 +1,488 @@
+.area__highlight {
+    background-color: transparent;
+    border-radius: 24px;
+    padding: 16px;
+    width: 100%;
+    border: 1px #A8A8A8 dashed;
+    pointer-events: none;
+    z-index: -1;
+}
+  
+.dragging {
+    transform: rotate(5deg);
+    transition: transform 0.1s ease-in-out;
+}
+
+.task__details__overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-radius: 30px;
+    width: min(100%, 525px);
+    padding: 48px 40px;
+    background-color: white;
+    box-shadow: 0px 0px 14px 3px #0000000A;
+    pointer-events: all;
+    position: relative;
+    right: -2000px;
+    transition: transform 125ms ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-inline: 16px;
+    max-height: 930px;
+}
+
+.card__category__big {
+    border-radius: 8px;
+    height: 36px;
+    padding: 4px 24px;
+    font-size: 23px;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technical__task__big {
+    background-color: #1FD7C1;
+    width: min(100%, 210px);
+}
+
+.user__story__big {
+    background-color: #0038FF;
+    width: min(100%, 164px);
+}
+
+.details__title {
+    max-height: 222px;
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.details__description {
+    overflow: hidden;
+    word-break: break-word;
+    max-height: 48px;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.details__center__containers {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    width: 100%;
+}
+
+.details__text__center__left {
+    color: #42526E;
+    font-size: 20px;
+    font-weight: 400;
+    width: min(100%, 91px);
+}
+
+.details__text__center__right {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.details__priority {
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.details__assigned__to__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.details__assigned__to__header {
+    color: #42526E;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.details__assigned__to__box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 176px;
+    overflow-y: auto;
+}
+
+.details__assigned__to__item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 10px;
+    height: 56px;
+}
+  
+.details__assigned__to__item__left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.details__assigned__to__item__left h3 {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.details__assigned__to__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    font-weight: 400;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: solid 2px #FFFFFF;
+}
+
+.details__subtasks__box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 68px;
+}
+
+.details__subtasks__item {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 10px;
+    height: 32px;
+    gap: 16px;
+}
+
+.details__subtasks {
+    display: none;
+}
+
+.details__subtasks__checkbox__container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom__checkbox__subtasks {
+    width: 24px;
+    height: 24px;
+    background-image: url('../assets/icons/pp_checkbox_default_icon.png');
+    position: relative;
+}
+
+.custom__checkbox__subtasks:hover {
+    background-image: url('../assets/icons/pp_checkbox_hover_disable_icon.png');
+}
+
+.details__subtasks:checked + .custom__checkbox__subtasks {
+    background-image: url('../assets/icons/pp_checkbox_checked_icon.png');
+}
+
+.details__subtasks:checked + .custom__checkbox__subtasks:hover {
+    background-image: url('../assets/icons/pp_checkbox_hover_checked_icon.png');
+}
+
+.details__subtask__text {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    overflow-x: hidden;
+}
+
+.details__footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.details__footer__buttonbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.edit__contact__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2A3647;
+    transition: color 125ms, font-weight 75ms ease-in;
+    width: 73px;
+}
+
+.edit__contact__button:hover {
+    color: #29ABE2;
+    font-weight: 700;
+}
+
+.edit__contact__button:hover .edit__icon__default {
+    display: none;
+}
+
+.edit__contact__button:hover .edit__icon__hover {
+    display: block;
+}
+
+.edit__contact__button:active .edit__icon__default {
+    display: none;
+}
+
+.edit__contact__button:active .edit__icon__hover {
+    display: block;
+}
+
+.edit__icon__default {
+    width: 24px;
+    height: 24px;
+}
+
+.edit__icon__hover {
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+
+.delete__contact__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2A3647;
+    transition: color 125ms, font-weight 75ms ease-in;
+    width: 93px;
+}
+
+.delete__contact__button:hover {
+    color: #29ABE2;
+    font-weight: 700;
+}
+
+.delete__contact__button:hover .delete__icon__default {
+    display: none;
+}
+
+.delete__contact__button:hover .delete__icon__hover {
+    display: block;
+}
+
+.delete__contact__button:active .delete__icon__default {
+    display: none;
+}
+
+.delete__contact__button:active .delete__icon__hover {
+    display: block;
+}
+
+.delete__icon__default {
+    width: 24px;
+    height: 24px;
+}
+
+.delete__icon__hover {
+    display: none;
+}
+
+.details__footer__buttonbox__seperator {
+    height: 24px;
+    border: 1px solid #D1D1D1;
+}
+
+.edit__task__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    width: min(100%, 525px);
+    border-radius: 30px;
+    padding: 48px 40px;
+    background-color: white;
+    box-shadow: 0px 0px 14px 3px #0000000A;
+    pointer-events: all;
+    position: relative;
+    transition: transform 125ms ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-inline: 16px;
+    max-height: 930px;
+    z-index: 3000;
+}
+
+.input__boxes__edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    overflow-y: scroll;
+    padding-right: 16px;
+}
+
+.edit__task__overlay__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.edit__dropdown__list__wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.choosen__contacts__container__edit {
+    max-height: 90px;
+    height: unset;
+}
+
+.ok__button {
+    width: 89px;
+    height: 57px;
+    gap: 4px;
+    padding: 16px;;
+}
+
+.text__and__buttons__edit {
+    background-color: white;
+    padding: 16px;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.is__required__text__edit {
+    display: none;
+}
+
+.is__required__text__mobile__edit {
+    display: flex;
+}
+
+.overlay__dropdownlist__contacts__add__task__edit {
+    z-index: 4000;
+}
+
+.dropdown__list__edit {
+    z-index: 4100;
+}
+
+#dropdown_list_wrapper_edit {
+    max-height: 0; 
+    transition: max-height 125ms ease-out;
+}
+
+#dropdown_list_wrapper_edit.open {
+    max-height: 232px;
+}
+
+#category_dropdown_list_wrapper_edit {
+    max-height: 0; 
+    transition: max-height 125ms ease-out;
+}
+
+#category_dropdown_list_wrapper_edit.open {
+    max-height: 232px;
+}
+
+.dropdown__search__container__edit {
+    z-index: 4050;
+}
+
+.added__subtasks__container__edit {
+    height: unset;
+    max-height: 124px;
+}
+
+.open__add__task__button__mobile {
+    display: none;
+}
+
+.searchbar__container__mobile {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #A8A8A8;
+    background-color: white;
+    padding: 4px 16px;
+    height: 48px;
+}
+  
+.searchbar__container__mobile label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchbar__container__mobile:has(.searchbar:focus) {
+    border: 1px solid #29ABE2;
+}
+
+.subtask__item__left {
+    max-width: calc(100% - 58px);
+    overflow: hidden;
+}
+
+.task__added__notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 312px;
+    height: 74px;
+    border-radius: 20px;
+    background-color: #2A3647;
+    color: white;
+    box-shadow: 0px 0px 4px 0px #00000026;
+    transition: transform 125ms ease-in-out;
+    z-index: 5000;
+    gap: 16px;
+    position: relative;
+    bottom: -1400px;
+}
+
+.task__added__notification__active {
+    transform: translateY(-1400px);
+}
+
+.overlay__task__added {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 4500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

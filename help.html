@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_dark.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_white.svg" media="(prefers-color-scheme: dark)">
+
+    <title>Help</title>
+
+    <link rel="stylesheet" href="./assets/fonts/fonts.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./styles/sidebar.css"/>
+    <link rel="stylesheet" href="./styles/help.css"/>
+    <link rel="stylesheet" href="./styles/standard.css"/>
+    <link rel="stylesheet" href="./styles/assets.css"/>
+
+    <script src="./script.js"></script>
+    <script src="./scripts/templates_add_task.js"></script>
+    <script src="./scripts/templates_board.js"></script>
+    <script src="./scripts/templates_contacts_summary.js"></script>
+    <script src="./scripts/assets.js"></script>
+</head>
+<body id="body" onload="init()">
+    <div class="overall overall__help">
+        <div class="sidebar">
+            <div class="sidebar__container">
+                <div onclick="reloadWebsite()" class="sidebar__logocontainer">
+                    <img src="./assets/icons/logo_sidebar.png" alt="Join Logo">
+                </div>
+                <div class="sidebar__navbarcontainer">
+                    <div class="sidebar__navbar">
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openSummaryWebsiteWithoutMobileAnimation()" class="sidebar__button">
+                                <img src="./assets/icons/summary_icon_white.png" alt="Summary">
+                                Summary
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openAddTaskWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/add_task_icon_white.png" alt="Add Task">
+                                Add Task
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openBoardWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/board_icon_white.png" alt="Board">
+                                Board
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openContactsWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/contacts_icon_white.png" alt="Contacts">
+                                Contacts
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sidebar__noticescontainer">
+                        <div class="behind__noticesbuttons">
+                            <button onclick="openPrivacyPolicyWebsite()" class="notices__button">Privacy Policy</button>
+                        </div>
+                        <div class="behind__noticesbuttons">
+                            <button onclick="openLegalNoticeWebsite()" class="notices__button">Legal notice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content__right">
+            <header>
+                <div class="header__container">
+                    <h3>Kanban Project Management Tool</h3>
+                    <div class="headerbox__right">
+                        <button onclick="toggleSubMenu()" id="currentuser_initials_ref" class="profile__button"></button>
+                        <div id="submenu" class="profile__button__submenu d__none">
+                            <button onclick="openLegalNoticeWebsite()" class="submenu__button">Legal Notice</button>
+                            <button onclick="openPrivacyPolicyWebsite()" class="submenu__button">Privacy Policy</button>
+                            <button onclick="logOut()" class="submenu__button">Log Out</button>
+                        </div>
+                        <div onclick="toggleSubMenu()" class="overlay__submenu d__none" id="overlay_submenu"></div>
+                    </div>
+                </div>
+            </header>
+            <main class="help__page">
+                <div class="help__headline">
+                    <h1 class="help__title">Help</h1>
+                    <button onclick="backToLastPage()" class="help__back__button">
+                        <img class="help__thin__back__button" src="./assets/icons/arrow_left_icon_light_blue_thin.png" alt="←">
+                        <img class="help__thick__back__button" src="./assets/icons/arrow_left_icon_light_blue_thick.png" alt="←">
+                    </button>
+                </div>
+                <div class="help__container">
+                    <p>Welcome to the help page for <span class="help__join">Join</span>. Here, you will find an overview of our kanban project management tool, its benefits, and how to use it effectively.</p>
+                </div>
+                <div class="help__section">
+                    <h2 class="help__subtitle">1. What is Join?</h2>
+                    <p><span class="help__join">Join</span> is a kanban-based project management tool developed as part of a web development bootcamp at the Developer Akademie.</p>
+                    <p>Kanban, a Japanese term meaning "billboard", is a method that helps visualize work, limit work-in-progress, and maximize efficiency. <span class="help__join">Join</span> follows these principles to provide an intuitive and visual interface for task and project management.</p>
+                    <p>Please note that <span class="help__join">Join</span> is an educational project and is not intended for professional business use. We do our best to ensure usability but cannot guarantee availability, accuracy, or reliability.</p>
+                </div>
+                <div class="help__section">
+                    <h2 class="help__subtitle">2. How to use Join</h2>
+                    <p>Below is a step-by-step guide on how to use <span class="help__join">Join</span> effectively.</p>
+                </div>
+                <div class="help__section">
+                    <h3 class="help__subtitle">2.1 Exploring the Board</h3>
+                    <p>After logging in, you will see the default board, which represents your project. It consists of four lists: "To Do", "In Progress", "Await Feedback", and "Done".</p>
+                </div>
+                <div class="help__section">
+                    <h3 class="help__subtitle">2.2 Creating Contacts</h3>
+                    <p>
+                        You can add contacts to collaborate on projects. Navigate to the "Contacts" section, click "New Contact", and enter the required details. Contacts can be assigned tasks and interact with them on the board.
+                    </p>
+                </div>
+                <div class="help__section">
+                    <h3 class="help__subtitle">2.3 Adding Cards</h3>
+                    <p>
+                        Tasks are represented by cards. Click the "+" button under a list to create a new card. You can add a task name, description, due date, and assignees.
+                    </p>
+                </div>
+                <div class="help__section">
+                    <h3 class="help__subtitle">2.4 Moving Cards</h3>
+                    <p>
+                        As a task progresses, move it across lists by dragging and dropping the card to the appropriate stage.
+                    </p>
+                </div>
+                <div class="help__section">
+                    <h3 class="help__subtitle">2.5 Deleting Cards</h3>
+                    <p>
+                        Completed tasks can either be moved to the "Done" list or deleted. Deleting a card removes it permanently. Please proceed with caution, as this action is irreversible.
+                    </p>
+                </div>
+                <div class="help__section">
+                    <h2 class="help__subtitle">3. Contact</h2>
+                    <p>
+                        If you have further questions regarding <span class="help__join">Join</span>, please contact us at <a href="mailto:geschaeftliche.anfragen.sssw@gmail.com">geschaeftliche.anfragen.sssw@gmail.com</a>. We are happy to assist you.
+                    </p>
+                </div>
+                <div class="help__section">
+                    <h2 class="help__enjoy__join">Enjoy using Join!</h2>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="rotate_message" class="rotate__overlay d__none">
+        <h1>Please rotate your device to portrait mode.</h1>
+    </div>
+</body>
+</html>

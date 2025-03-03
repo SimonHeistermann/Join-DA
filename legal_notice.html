@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_dark.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_white.svg" media="(prefers-color-scheme: dark)">
+
+    <title>Legal Notice</title>
+
+    <link rel="stylesheet" href="./assets/fonts/fonts.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./styles/sidebar.css"/>
+    <link rel="stylesheet" href="./styles/legal_notice.css"/>
+    <link rel="stylesheet" href="./styles/standard.css"/>
+    <link rel="stylesheet" href="./styles/assets.css"/>
+
+    <script src="./script.js"></script>
+    <script src="./scripts/templates_add_task.js"></script>
+    <script src="./scripts/templates_board.js"></script>
+    <script src="./scripts/templates_contacts_summary.js"></script>
+    <script src="./scripts/assets.js"></script>
+</head>
+<body id="body" onload="">
+    <div class="overall">
+        <div class="sidebar">
+            <div class="sidebar__container">
+                <div onclick="reloadWebsite()" class="sidebar__logocontainer">
+                    <img src="./assets/icons/logo_sidebar.png" alt="Join Logo">
+                </div>
+                <div class="sidebar__navbarcontainer">
+                    <div class="sidebar__navbar">
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openSummaryWebsiteWithoutMobileAnimation()" class="sidebar__button">
+                                <img src="./assets/icons/summary_icon_white.png" alt="Summary">
+                                Summary
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openAddTaskWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/add_task_icon_white.png" alt="Add Task">
+                                Add Task
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openBoardWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/board_icon_white.png" alt="Board">
+                                Board
+                            </button>
+                        </div>
+                        <div class="behind__sidebarbuttons">
+                            <button onclick="openContactsWebsite()" class="sidebar__button">
+                                <img src="./assets/icons/contacts_icon_white.png" alt="Contacts">
+                                Contacts
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sidebar__noticescontainer">
+                        <div class="behind__noticesbuttons">
+                            <button onclick="openPrivacyPolicyWebsite()" class="notices__button">Privacy Policy</button>
+                        </div>
+                        <div class="behind__noticesbuttons notices__buttonopen">
+                            <button onclick="reloadWebsite()" class="notices__button notices__buttonopen">Legal notice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content__right">
+            <header>
+                <div class="header__container">
+                    <h3>Kanban Project Management Tool</h3>
+                </div>
+            </header>
+            <main class="legal__notice">
+                <h1 class="legal__notice__title">Legal Notice</h1>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Imprint</h2>
+                    <p>Simon Heistermann<br>
+                        46325 Borken<br>
+                        Deutschland</p>
+                </section>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Exploring the Board</h2>
+                    <p>Email: <a href="mailto:geschaeftliche.anfragen.sssw@gmail.com">geschaeftliche.anfragen.sssw@gmail.com</a></p>
+                </section>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Acceptance of Terms</h2>
+                    <p>By accessing and using <strong>Join</strong> (Product), you acknowledge and agree to the following terms and conditions, 
+                        and any policies, guidelines, or amendments that may be presented from time to time. 
+                        The listed students may update or change the terms and conditions without notice.</p>
+                </section>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Scope and Ownership of the Product</h2>
+                    <p><strong>Join</strong> has been developed as part of a student group project in a web development bootcamp 
+                        at the <strong>Developer Akademie GmbH</strong>. It has an educational purpose and is not intended for extensive 
+                        personal or business use. Therefore, we cannot guarantee its availability, reliability, or accuracy.</p>
+                    <p>The design of <strong>Join</strong> is owned by <strong>Developer Akademie GmbH</strong>. 
+                        Unauthorized use, reproduction, modification, or distribution is strictly prohibited.</p>
+                </section>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Proprietary Rights</h2>
+                    <p>Apart from the design owned by <strong>Developer Akademie GmbH</strong>, the listed students retain all proprietary 
+                        rights in <strong>Join</strong>, including any copyrighted material, trademarks, and other proprietary information.</p>
+                </section>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Use of the Product</h2>
+                    <p><strong>Join</strong> is intended to be used for lawful purposes only. Any illegal activities, harassment, 
+                        or threats against other users are strictly prohibited. You are solely responsible for your interactions with others.</p>
+                </section>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Disclaimer of Warranties and Limitation of Liability</h2>
+                    <p><strong>Join</strong> is provided "as is" without warranties of any kind. In no event will the listed students 
+                        or <strong>Developer Akademie GmbH</strong> be liable for damages resulting from the use of this product.</p>
+                </section>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Indemnity</h2>
+                    <p>You agree to indemnify and hold harmless the listed students, <strong>Developer Akademie GmbH</strong>, and affiliates 
+                        from any claims, damages, or costs arising from your use of <strong>Join</strong>.</p>
+                </section>
+                <section class="legal__notice__section">
+                    <h2 class="legal__notice__subtitle">Contact</h2>
+                    <p>For any questions, please contact us at:<br>
+                        <a href="mailto:geschaeftliche.anfragen.sssw@gmail.com">Email to Simon Heistermann</a></p>
+                    <p><strong>Date:</strong> 25.02.2025</p>
+                </section>
+            </main>            
+        </div>
+    </div>
+    <div id="rotate_message" class="rotate__overlay d__none">
+        <h1>Please rotate your device to portrait mode.</h1>
+    </div>
+</body>
+</html>

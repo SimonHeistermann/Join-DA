@@ -1,0 +1,78 @@
+.overlay {
+    background-color: #0000003f;
+    min-height: 100vh;
+    width: 100%;
+    margin-inline: auto;
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.overlay__content {
+    background-color: transparent;
+    min-height: 100vh;
+    width: min(100%, 1920px);
+    margin-inline: auto;
+    z-index: 3000;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.add__contact__overlay {
+    display: flex;
+    gap: 64px;
+    border-radius: 30px;
+    width: min(100%, 1212px);
+    height: 592px;
+    background-color: white;
+    box-shadow: 0px 0px 14px 3px #0000000A;
+    pointer-events: all;
+    position: relative;
+    right: -2000px;
+    transition: transform 125ms ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80vh;
+    margin-inline: 16px;
+}
+
+.add__contact__button__mobile {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    background-color: #2A3647;
+    border-radius: 50%;
+    border: 1px solid #2A3647;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    right: 16px;
+    bottom: 110px;
+}
+
+.add__contact__button__mobile:active {
+    border: 1px solid #29ABE2;
+    background-color: #29ABE2;
+    box-shadow: 0px 4px 4px 0 #00000040;
+}
+
+.overlay__add__and__edit__fly__in {
+    background-color: transparent;
+    min-height: 100vh;
+    width: 100%;
+    margin-inline: auto;
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}

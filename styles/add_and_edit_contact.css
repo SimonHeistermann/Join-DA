@@ -1,0 +1,417 @@
+.close__button__box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.close__button {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.close__button:hover .close__button__img {
+    display: none;
+}
+
+.close__button:hover .close__button__hover__img {
+    display: block;
+}
+
+.close__button__hover__img {
+    display: none;
+}
+
+.add__contact__overlay__left {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px 0px 0px 26px;
+    width: 38.5%;
+    background-color: #2A3647;
+}
+
+.add__contact__overlay__left__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.add__contact__overlay__left img {
+    width: 55.6px;
+    height: 66.48px;
+}
+
+.add__contact__overlay__left h2 {
+    color: white;
+}
+
+.add__contact__overlay__seperator {
+    background-color: #29ABE2;
+    width: 90px;
+    height: 3px;
+    border-radius: 3px;
+}
+
+.add__contact__overlay__right {
+    width: 61.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 48px 64px 32px 32px;
+}
+
+.add__contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.default__profilebadge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #D1D1D1;
+    border: 3px white solid;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add__contact__container {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+.add__contact__inputbox {
+    min-width: 422px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.person__container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    background-color: #ffff;
+    padding: 4px 16px 4px 16px;
+}
+
+.person__container:has(.person__input:focus) {
+    border: 1px solid #29ABE2;
+}
+
+.person__container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person__input {
+    min-height: 40px;
+    width: 100%;
+    border-width: 0;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.person__input:focus {
+    outline: none;
+}
+
+.person__input::placeholder {
+    color: #D1D1D1;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.person__logo {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.email__container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    background-color: #ffff;
+    padding: 4px 16px 4px 16px;
+}
+
+.email__container:has(.email__input:focus) {
+    border: 1px solid #29ABE2;
+}
+
+.email__container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email__input {
+    min-height: 40px;
+    width: 100%;
+    border-width: 0;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.email__input:focus {
+    outline: none;
+}
+
+.email__input::placeholder {
+    color: #D1D1D1;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.email__logo {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.phone__container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    background-color: #ffff;
+    padding: 4px 16px 4px 16px;
+}
+
+.phone__container:has(.phone__input:focus) {
+    border: 1px solid #29ABE2;
+}
+
+.phone__container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone__input {
+    min-height: 40px;
+    width: 100%;
+    border-width: 0;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.phone__input:focus {
+    outline: none;
+}
+
+.phone__input::placeholder {
+    color: #D1D1D1;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.phone__logo {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.phone__box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.error__inputs {
+    border: 1px solid #FF001F !important;
+    animation: shake 0.3s ease-in-out;
+}
+
+.errormessage__box {
+    font-size: 13px;
+    font-weight: 400;
+    color: #FF8190;
+    display: none;
+}
+
+.errormessage__box.active {
+    display: block;
+}
+
+.add__contact__buttonbox {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    left: 64px;
+}
+
+.cancel__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: transparent;
+    font-size: 21px;
+    font-weight: 500;
+    color: #2A3647;
+    width: 126px;
+    height: 55px;
+    border-radius: 10px;
+    border: solid 1px #2A3647;
+    transition: background-color 125ms ease-in, box-shadow 125ms, border 125ms ease-in;
+}
+
+.cancel__button:hover {
+    border: solid 1px #29ABE2;
+    color: #29ABE2;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.cancel__button:hover .cancel__button__img {
+    display: none;
+}
+
+.cancel__button:hover .cancel__button__img__hover {
+    display: block;
+}
+
+.cancel__button:active {
+    border: solid 1px #091931;
+    color: #091931;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.cancel__button__img__hover {
+    display: none;
+}
+
+.create__contact__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 214px;
+    height: 55px;
+    gap: 4px;
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    background-color: #2A3647;
+    border-radius: 10px;
+    transition: background-color 125ms ease-in, box-shadow 125ms;
+}
+
+.create__contact__button:hover {
+    background-color: #29ABE2;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.create__contact__button:active {
+    background-color: #091931;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.delete__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: 21px;
+    font-weight: 500;
+    color: #2A3647;
+    width: 113px;
+    height: 55px;
+    border-radius: 10px;
+    border: solid 1px #2A3647;
+    transition: background-color 125ms ease-in, box-shadow 125ms, border 125ms ease-in;
+}
+
+.delete__button:hover {
+    border: solid 1px #29ABE2;
+    color: #29ABE2;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.delete__button:active {
+    border: solid 1px #091931;
+    color: #091931;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.save__button, .save__button__current__user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 111px;
+    height: 55px;
+    gap: 4px;
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    background-color: #2A3647;
+    border-radius: 10px;
+    transition: background-color 125ms ease-in, box-shadow 125ms;
+}
+
+.save__button:hover, .save__button__current__user:hover {
+    background-color: #29ABE2;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.save__button:active, .save__button__current__user:active {
+    background-color: #091931;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.edit__contact__buttonbox {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    left: 8px;
+}
+
+.edit__current__user__buttonbox {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    left: -40px;
+}
+
+.default__profilebadge__mobile, .contacts__profilebadge__big__mobile {
+    display: none;
+}
+
+
+
+
+
+
+
+

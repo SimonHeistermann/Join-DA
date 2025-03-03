@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_dark.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/join_logo_favicon_white.svg" media="(prefers-color-scheme: dark)">
+
+    <title>Board</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+    <link rel="stylesheet" href="./assets/fonts/fonts.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./styles/sidebar.css"/>
+    <link rel="stylesheet" href="./styles/keyframes.css"/>
+    <link rel="stylesheet" href="./styles/add_task.css"/>
+    <link rel="stylesheet" href="./styles/add_task_due_date_and_radio.css"/>
+    <link rel="stylesheet" href="./styles/add_task_mobile.css"/>
+    <link rel="stylesheet" href="./styles/standard.css"/>
+    <link rel="stylesheet" href="./styles/bgcolors.css"/>
+    <link rel="stylesheet" href="./styles/assets.css"/>
+    <link rel="stylesheet" href="./styles/board.css"/>
+    <link rel="stylesheet" href="./styles/board_pop_up.css"/>
+    <link rel="stylesheet" href="./styles/board_mobile.css"/>
+
+    <script src="./script.js"></script>
+    <script src="./scripts/templates_add_task.js"></script>
+    <script src="./scripts/templates_board.js"></script>
+    <script src="./scripts/templates_contacts_summary.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/de.js"></script>
+    <script src="./scripts/add_task.js"></script>
+    <script src="./scripts/add_task_process_form.js"></script>
+    <script src="./scripts/search.js"></script>
+    <script src="./scripts/board.js"></script>
+    <script src="./scripts/board_details.js"></script>
+    <script src="./scripts/board_edit_task.js"></script>
+    <script src="./scripts/board_edit_task_validate.js"></script>
+    <script src="./scripts/assets.js"></script>
+</head>
+<body id="body" onload="initBoard()">
+  <div class="overall">
+    <div class="sidebar">
+      <div class="sidebar__container">
+          <div onclick="reloadWebsite()" class="sidebar__logocontainer">
+              <img src="./assets/icons/logo_sidebar.png" alt="Join Logo">
+          </div>
+          <div class="sidebar__navbarcontainer">
+              <div class="sidebar__navbar">
+                  <div class="behind__sidebarbuttons">
+                      <button onclick="openSummaryWebsiteWithoutMobileAnimation()" class="sidebar__button">
+                          <img src="./assets/icons/summary_icon_white.png" alt="Summary">
+                          Summary
+                      </button>
+                  </div>
+                  <div class="behind__sidebarbuttons">
+                      <button onclick="openAddTaskWebsite()" class="sidebar__button">
+                          <img src="./assets/icons/add_task_icon_white.png" alt="Add Task">
+                          Add Task
+                      </button>
+                  </div>
+                  <div class="behind__sidebarbuttons sidebarbutton__open">
+                      <button onclick="reloadWebsite()" class="sidebar__button sidebarbutton__open">
+                          <img src="./assets/icons/board_icon_white.png" alt="Board">
+                          Board
+                      </button>
+                  </div>
+                  <div class="behind__sidebarbuttons">
+                      <button onclick="openContactsWebsite()" class="sidebar__button">
+                          <img src="./assets/icons/contacts_icon_white.png" alt="Contacts">
+                          Contacts
+                      </button>
+                  </div>
+              </div>
+              <div class="sidebar__noticescontainer">
+                  <div class="behind__noticesbuttons">
+                      <button onclick="openPrivacyPolicyWebsite()" class="notices__button">Privacy Policy</button>
+                  </div>
+                  <div class="behind__noticesbuttons">
+                      <button onclick="openLegalNoticeWebsite()" class="notices__button">Legal notice</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__right">
+          <header>
+            <div class="header__container">
+              <h3>Kanban Project Management Tool</h3>
+              <div class="headerbox__right">
+                  <button onclick="openHelpWebsite('board')" class="help__button">
+                      <img src="./assets/icons/help_icon.png" alt="Help">
+                  </button>
+                  <button onclick="toggleSubMenu()" id="currentuser_initials_ref" class="profile__button">SM</button>
+                  <div id="submenu" class="profile__button__submenu d__none">
+                      <button onclick="openHelpWebsite('board')" class="submenu__button__help">Help</button>
+                      <button onclick="openLegalNoticeWebsite()" class="submenu__button">Legal Notice</button>
+                      <button onclick="openPrivacyPolicyWebsite()" class="submenu__button">Privacy Policy</button>
+                      <button onclick="logOut()" class="submenu__button">Log Out</button>
+                  </div>
+                  <div onclick="toggleSubMenu()" class="overlay__submenu d__none" id="overlay_submenu"></div>
+              </div>
+              <button onclick="reloadWebsite()" class="header__logo__mobile">
+                  <img src="./assets/icons/header_logo_icon_mobile.png" alt="Join Logo">
+              </button>
+            </div>
+          </header>
+          <main>
+            <div class="board__header">
+              <h1>Board</h1>
+              <div class="board__header__right">
+                <form onsubmit="filterBoard(event, 'board_search_input')" class="searchbar__container">
+                  <input class="searchbar" oninput="filterBoard(event, 'board_search_input')" id="board_search_input" type="text" placeholder="Find Task">
+                  <div class="searchbar__right">
+                    <div class="searchbar__seperator"></div>
+                    <label for="board_search_input">
+                      <img src="./assets/icons/search_icon_blue.png" alt="Search">
+                    </label>
+                  </div>
+                </form>
+                <button onclick="openAddTask()" id="open_add_task_button" class="open__add__task__button">
+                  Add Task
+                  <img src="./assets/icons/add_icon_white.png" alt="+">
+                </button>
+                <button onclick="openAddTask()" id="open_add_task_button_mobile" class="open__add__task__button__mobile">
+                  <img src="./assets/icons/add_icon_white.png" alt="+">
+                </button>
+              </div>
+            </div>
+            <div class="board__content">
+              <form onsubmit="filterBoard(event, 'board_search_input_mobile')" class="searchbar__container__mobile">
+                <input class="searchbar" oninput="filterBoard(event, 'board_search_input_mobile')" id="board_search_input_mobile" type="text" placeholder="Find Task">
+                <div class="searchbar__right">
+                  <div class="searchbar__seperator"></div>
+                  <label for="board_search_input_mobile">
+                    <img src="./assets/icons/search_icon_blue.png" alt="Search">
+                  </label>
+                </div>
+              </form>
+              <div class="board__content__container">
+                <div class="board__content__header">
+                  <span class="column__title">To do</span>
+                  <button onclick="openAddTask()" class="column__button">
+                    <img class="column__button__icon__default" src="./assets/icons/plus_icon_board_default.png" alt="+">
+                    <img class="column__button__icon__hover" src="./assets/icons/plus_icon_board_hover.png" alt="+">
+                    <img class="column__button__icon__clicked" src="./assets/icons/plus_icon_board_clicked.png" alt="+">
+                  </button>
+                </div>
+                <div ondrop="moveTo('to-do'); removeHighlight()" ondragleave="removeHighlight()" ondragover="allowDrop(event); highlight('to_do_content')" class="column__content" id="to_do_content">
+                </div>
+              </div>
+              <div class="board__content__container">
+                <div class="board__content__header">
+                  <span class="column__title">In progress</span>
+                  <button onclick="openAddTask()" class="column__button">
+                    <img class="column__button__icon__default" src="./assets/icons/plus_icon_board_default.png" alt="+">
+                    <img class="column__button__icon__hover" src="./assets/icons/plus_icon_board_hover.png" alt="+">
+                    <img class="column__button__icon__clicked" src="./assets/icons/plus_icon_board_clicked.png" alt="+">
+                  </button>
+                </div>
+                <div ondrop="moveTo('in-progress'); removeHighlight()" ondragleave="removeHighlight()" ondragover="allowDrop(event); highlight('in_progress_content')" class="column__content" id="in_progress_content">
+                </div>
+              </div>
+              <div class="board__content__container">
+                <div class="board__content__header">
+                  <span class="column__title">Await feedback</span>
+                  <button onclick="openAddTask()" class="column__button">
+                    <img class="column__button__icon__default" src="./assets/icons/plus_icon_board_default.png" alt="+">
+                    <img class="column__button__icon__hover" src="./assets/icons/plus_icon_board_hover.png" alt="+">
+                    <img class="column__button__icon__clicked" src="./assets/icons/plus_icon_board_clicked.png" alt="+">
+                  </button>
+                </div>
+                <div ondrop="moveTo('await-feedback'); removeHighlight()" ondragleave="removeHighlight()" ondragover="allowDrop(event); highlight('awaiting_feedback_content')" class="column__content" id="awaiting_feedback_content">
+                </div>
+              </div>
+              <div class="board__content__container">
+                <div class="board__content__header">
+                  <span class="column__title">Done</span>
+                  <button onclick="openAddTask()" class="column__button">
+                    <img class="column__button__icon__default" src="./assets/icons/plus_icon_board_default.png" alt="+">
+                    <img class="column__button__icon__hover" src="./assets/icons/plus_icon_board_hover.png" alt="+">
+                    <img class="column__button__icon__clicked" src="./assets/icons/plus_icon_board_clicked.png" alt="+">
+                  </button>
+                </div>
+                <div ondrop="moveTo('done'); removeHighlight()" ondragleave="removeHighlight()" ondragover="allowDrop(event); highlight('done_content')" class="column__content" id="done_content">
+                </div>
+              </div>
+            </div>
+          </main>
+      </div>
+  </div>
+  <div onclick="closeAddTaskOverlay()" class="overlay d__none" id="add_task_overlay_board">
+    <div class="overlay__content" id="add_task_overlay_board_content">
+      <div onclick="event.stopPropagation();" class="add__task__overlay" id="add_task_overlay">
+        <div class="add__task__overlay__header">
+          <h1>Add Task</h1>
+          <div class="close__button__box">  
+            <button onclick="closeAddTaskOverlay()" class="close__button">
+                <img class="close__button__img" src="./assets/icons/close_icon_blue.png" alt="Close Icon">
+                <img class="close__button__hover__img" src="./assets/icons/close_icon_blue_hover.png" alt="Close Icon Hover">
+            </button>
+        </div>
+        </div>
+          <form class="add__task__form" id="add_task_form" onsubmit="handleFormSubmit(event)">
+            <div class="input__boxes">
+              <div class="add__task__left">
+                <div class="input__container" id="add_task_title_input_container">
+                  <label for="add_task_title_input"><h3>Title<span class="red__star">*</span></h3></label>
+                  <div class="input__box">
+                    <input onkeydown="handleKeyDown(event)" type="text" id="add_task_title_input" placeholder="Enter a title">
+                    <div class="errormessage__box" id="add_task_title_input_box_error_box"></div>
+                  </div>
+                </div>
+                <div class="input__container">
+                  <label for="task_description"><h3>Description</h3></label>
+                  <div class="input__box">
+                    <textarea onkeydown="handleKeyDown(event)" rows="5" cols="30" type="text" id="task_description" placeholder="Enter a Description"></textarea>
+                  </div>
+                </div>
+                <div class="dropdown__container">
+                  <label for="assignee_search_input"><h3>Assigned to</h3></label>
+                  <div class="dropdown__content">
+                    <button class="dropdown__toggle" id="dropdown_toggle" onclick="openDropdownList(event)">
+                      <h3>Select contacts to assign</h3>
+                      <span class="dropdown__arrow__icon__container">
+                        <img id="dropdown_arrow_icon" class="dropdown__arrow__icon__default" src="./assets/icons/arrow_drop_down_icon.png" alt="Drop Down Icon">
+                        <img id="dropdown_arrow_icon_hover" class="dropdown__arrow__icon__hover" src="./assets/icons/arrow_drop_down_icon_hover.png" alt="Drop Down Icon">
+                      </span>
+                    </button>
+                    <div class="dropdown__search__container d__none" id="dropdown_search_container">
+                      <input onkeydown="handleKeyDown(event)" type="text" class="dropdown__search__input" id="assignee_search_input" placeholder="" oninput="filterContacts()"/>
+                      <button onclick="closeDropDownList(event)" class="close__dropdown__button">
+                        <img id="dropdown_arrow_up_icon" class="dropdown__arrow__up__icon__default" src="./assets/icons/arrow_drop_down_up_icon.png" alt="Drop Down Up Icon">
+                        <img id="dropdown_arrow_up_icon_hover" class="dropdown__arrow__up__icon__hover" src="./assets/icons/arrow_drop_down_up_icon_hover.png" alt="Drop Down Up Icon">
+                      </button>
+                    </div>
+                    <div class="dropdown__list__wrapper" id="dropdown_list_wrapper">
+                      <div onclick="closeDropDownList(event)" class="overlay__dropdownlist__contacts__add__task d__none" id="overlay_dropdown_list_add_task_contacts"></div>
+                      <ul class="dropdown__list" id="dropdown_list"></ul>
+                    </div>
+                  </div>
+                  <div class="choosen__contacts__container" id="choosen_contacts_container">
+                  </div>
+                </div>
+              </div>
+              <div class="add__task__seperator"></div>
+              <div class="add__task__right">
+                <div class="date__box">
+                  <h3 class="due__date__text" onclick="openCalendar()">Due date<span class="red__star">*</span></h3>
+                  <div class="date__container" id="date_container_input">
+                      <input class="date__input" id="task_due_date" type="text" placeholder="dd/mm/yyyy" name="task_due_date" autocomplete="off">
+                      <label for="task_due_date" onclick="openCalendar()">
+                          <img class="calendar__icon" src="./assets/icons/date_icon_black.png" alt="Calendar Icon">
+                      </label>
+                  </div>
+                  <div id="errormessage_box_date" class="errormessage__box"></div>
+                </div>
+                <div class="input__container">
+                  <h3>Prio</h3>
+                  <div class="radio__container">
+                    <label class="radio radio__urgent">
+                      <input type="radio" name="prio" value="1" onclick="setTaskPrio(1)"/>
+                      <h3>Urgent</h3>
+                      <img class="urgent__icon__red" src="assets/icons/urgent_icon_red.png" alt="↑"/>
+                      <img class="urgent__icon__white" src="assets/icons/urgent_icon_white.png" alt="↑"/>
+                    </label>
+                    <label class="radio radio__medium">
+                      <input type="radio" name="prio" value="2" onclick="setTaskPrio(2)" checked/>
+                      <h3>Medium</h3>
+                      <img class="medium__icon__orange" src="assets/icons/medium_icon_orange.png" alt="="/>
+                      <img class="medium__icon__white" src="assets/icons/medium_icon_white.png" alt="=" />
+                    </label>
+                    <label class="radio radio__low">
+                      <input type="radio" name="prio" value="3" onclick="setTaskPrio(3)"/>
+                      <h3>Low</h3> 
+                      <img class="low__icon__green" src="assets/icons/low_icon_green.png" alt="↓"/>
+                      <img class="low__icon__white" src="assets/icons/low_icon_white.png" alt="↓"/>
+                    </label>
+                  </div>
+                </div>
+                <div class="dropdown__container">
+                  <h3>Category<span class="red__star">*</span></h3>
+                  <div class="dropdown__content" id="category_dropdown_content">
+                    <button class="dropdown__toggle" id="category_dropdown_toggle" onclick="openTaskCategoryList(event)">
+                      <h3 id="selected_category_ref">Select task category</h3>
+                      <span class="dropdown__arrow__icon__container">
+                        <img id="category_dropdown_arrow_icon" class="dropdown__arrow__icon__default" src="./assets/icons/arrow_drop_down_icon.png" alt="Drop Down Icon">
+                        <img id="category_dropdown_arrow_icon_hover" class="dropdown__arrow__icon__hover" src="./assets/icons/arrow_drop_down_icon_hover.png" alt="Drop Down Icon">
+                      </span>
+                    </button>
+                    <div class="dropdown__search__container d__none" id="category_dropdown_container">
+                      <h3>Select task category</h3>
+                      <button onclick="closeTaskCategoryList(event)" class="close__dropdown__button">
+                        <img id="category_dropdown_arrow_up_icon" class="dropdown__arrow__up__icon__default" src="./assets/icons/arrow_drop_down_up_icon.png" alt="Drop Down Up Icon">
+                        <img id="category_dropdown_arrow_up_icon_hover" class="dropdown__arrow__up__icon__hover" src="./assets/icons/arrow_drop_down_up_icon_hover.png" alt="Drop Down Up Icon">
+                      </button>
+                    </div>
+                    <div class="dropdown__list__wrapper" id="category_dropdown_list_wrapper">
+                      <div onclick="closeTaskCategoryList(event)" class="overlay__dropdownlist__contacts__add__task d__none" id="overlay_dropdown_list_add_task_category"></div>
+                      <ul class="dropdown__list" id="category_dropdown_list"></ul>
+                    </div>
+                    <div class="errormessage__box" id="category_dropdown_error_box"></div>
+                  </div>
+                </div>
+                <div class="subtasks__container">
+                  <h3>Subtasks</h3>
+                  <div class="date__container" id="subtask_input_container">
+                    <input onclick="displayAddSubtaskButtons(event)" onkeydown="handleKeyDownAddSubTask(event)" class="date__input" id="input_subtasks" type="text" placeholder="Add new subtask" name="input_subtasks" autocomplete="off">
+                    <label class="add__subtask__label" for="input_subtasks">
+                        <button onclick="displayAddSubtaskButtons(event)"  id="add_subtask_box" class="add__subtask__box">
+                          <img class="add__subtask__icon" src="./assets/icons/add_icon_blue.png" alt="+">
+                          <img class="add__subtask__icon__hover" src="./assets/icons/add_icon_blue_hover.png" alt="+">
+                        </button>
+                        <div id="active_add_subtask_box" class="active__add__subtask__box d__none">
+                          <button onclick="closeAddSubTask(event)" class="close__subtask__box">
+                            <img class="close__subtask__icon" src="./assets/icons/close_icon_subtask_blue.png" alt="X">
+                            <img class="close__subtask__icon__hover" src="./assets/icons/close_icon_subtask_blue_hover.png" alt="X">
+                          </button>
+                          <div class="add__subtask__seperator"></div>
+                          <button onclick="addSubtask(event)" class="check__subtask__box">
+                            <img class="check__subtask__icon" src="./assets/icons/hook_icon_subtask_blue.png" alt="Hook">
+                            <img class="check__subtask__icon__hover" src="./assets/icons/hook_icon_subtask_blue_hover.png" alt="Hook">
+                          </button>
+                        </div>
+                    </label>
+                  </div>
+                  <div class="added__subtasks__container" id="added_subtasks_container">
+                  </div>
+                </div>
+                <div class="is__required__text__mobile">
+                  <span class="red__star">*</span>
+                  This field is required
+                </div>
+              </div>
+            </div>
+            <div class="text__and__buttons">
+              <div class="is__required__text">
+                <span class="red__star">*</span>
+                This field is required
+              </div>
+              <div class="add__task__buttonbox">
+                <button onclick="cancelForm(event)" class="clear__button">
+                    Clear
+                    <img class="clear__button__img" src="./assets/icons/cancel_icon_blue.png" alt="Cancel Icon">
+                    <img class="clear__button__img__hover" src="./assets/icons/cancel_icon_lightblue.png" alt="Cancel Icon">
+                </button>
+                <button type="submit" class="create__contact__button" id="create_task_button">
+                    Create Task
+                    <img src="./assets/icons/hook_icon_white.png" alt="Hook Icon">
+                </button>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+  <div onclick="closeTaskDetailsOverlay()" class="overlay d__none" id="task_details_overlay_board">
+    <div class="overlay__content" id="task_details_overlay_content_board">
+    </div>
+  </div>
+  <div id="rotate_message" class="rotate__overlay d__none">
+      <h1>Please rotate your device to portrait mode.</h1>
+  </div>
+  <div class="overlay__task__added d__none" id="overlay_task_added">
+    <div class="task__added__notification" id="task_added_notification">
+      <h3>Task added to board</h3>
+      <img src="./assets/icons/board_icon_white.png" alt="Board"> 
+    </div>
+  </div>
+</body>
+</html>

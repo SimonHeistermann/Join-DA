@@ -1,0 +1,277 @@
+@media(max-width: 1279px) {
+    main {
+        margin-top: 160px !important;
+        margin-bottom: 0px;
+        max-height: calc(100vh - 168px);
+        overflow-x: hidden;
+        width: min(100%, 1279px);
+        padding-inline: 64px;
+        position: relative;
+    }
+    
+    .add__task__form {
+        margin-bottom: 60px;
+        width: min(100%, 768px);
+    }
+
+    h1 {
+        margin-top: 32px;
+        font-size: 47px;
+    }
+
+    .input__boxes {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .add__task__header__mobile {
+        position: relative;
+        width: 100%;
+        background-color: #F6F7F8;
+        padding: 0px 16px 16px 16px;
+        z-index: 1200;
+        margin-top: 0px;
+    }
+
+    .add__task__seperator {
+        display: none;
+    }
+
+    .add__task__left {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .dropdown__list__wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    .add__task__right {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .radio__container {
+        justify-content: space-between;
+    }
+
+    .radio {
+        width: 100%;
+    }
+
+    .added__subtasks__container {
+        max-height: 124px;
+        height: unset;
+        gap: 4px;
+    }
+
+    .subtask__item {
+        height: 48px;
+    }
+
+    .subtask__item__edited {
+        height: 48px;
+    }
+
+    .is__required__text {
+        display: none;
+    }
+
+    .is__required__text__mobile {
+        display: flex;
+    }
+
+    .text__and__buttons {
+        justify-content: flex-end;
+        width: 100%;
+        background-color: #F6F7F8;
+        padding: 16px;
+    }
+
+    .edit__and__delete__subtask__box {
+        display: flex;
+    }
+
+    .choosen__contacts__container {
+        max-height: 90px;
+        height: unset;
+    }
+}
+
+@media(max-width: 768px) {
+    main {
+        margin-top: 160px !important;
+        margin-bottom: 0px;
+        max-height: calc(100vh - 168px);
+        overflow-x: hidden;
+        width: min(100%, 768px);
+        padding-inline: 16px;
+        position: relative;
+    }
+    
+    .add__task__form {
+        margin-bottom: 200px;
+        width: min(100%, 768px);
+    }
+
+    h1 {
+        margin-top: 32px;
+        font-size: 47px;
+    }
+
+    .input__boxes {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .add__task__header__mobile {
+        position: fixed;
+        width: 100%;
+        left: 0px;
+        top: 80px;
+        background-color: #F6F7F8;
+        padding: 32px 16px 16px 16px;
+        z-index: 1200;
+        margin-top: 0px;
+    }
+
+    .add__task__seperator {
+        display: none;
+    }
+
+    .add__task__left {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .dropdown__list__wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    .add__task__right {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .radio__container {
+        justify-content: space-between;
+    }
+
+    .radio {
+        width: 100%;
+    }
+
+    .added__subtasks__container {
+        max-height: 124px;
+        height: unset;
+        gap: 4px;
+    }
+
+    .subtask__item {
+        height: 48px;
+    }
+
+    .subtask__item__edited {
+        height: 48px;
+    }
+
+    .is__required__text {
+        display: none;
+    }
+
+    .is__required__text__mobile {
+        display: flex;
+    }
+
+    .text__and__buttons {
+        justify-content: flex-end;
+        position: fixed;
+        width: 100%;
+        left: 0px;
+        bottom: 80px;
+        background-color: #F6F7F8;
+        padding: 16px;
+        z-index: 1200;
+    }
+
+    .edit__and__delete__subtask__box {
+        display: flex;
+    }
+
+    .choosen__contacts__container {
+        max-height: 90px;
+        height: unset;
+    }
+}
+
+@media(max-width: 428px) {
+    main {
+        padding-inline: 16px;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .input__container input {
+        font-size: 16px;
+        padding: 10px 21px;
+    }
+
+    .dropdown__item {
+        height: 56px;
+    }
+
+    .date__container {
+        height: 48px;
+    }
+
+    .date__input {
+        font-size: 16px;
+    }
+
+    .radio {
+        height: 41px;
+    }
+
+    .dropdown__item__category {
+        height: 43px;
+    }
+
+    .clear__button {
+        height: 56px;
+        width: 110px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .create__contact__button {
+        width: 183px;
+        height: 56px;
+    }
+}
+
+@media(max-width: 390px) {
+    .add__task__buttonbox {
+        gap: 16px;
+    }
+
+    .clear__button {
+        height: 56px;
+        width: 106px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .create__contact__button {
+        width: 176px;
+        height: 56px;
+    }
+}

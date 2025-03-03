@@ -1,0 +1,420 @@
+@media(max-width: 1279px) {
+    main {
+        gap: 32px;
+    }
+
+    .contacts__table {
+        padding: 0px 16px 32px 16px;
+    }
+
+    .add__contact__button {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .add__contact__button img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contacts__lettertext {
+        width: 100%;
+        padding: 16px 0px;
+    }
+
+    .contact {
+        width: 100%;
+        padding: 16px 8px;
+    }
+
+    .contact__overview__header {
+        gap: 16px;
+    }
+
+    h1 {
+        font-size: 54px;
+    }
+
+    .contact__overview__header__seperator {
+        height: 52px;
+        width: 2px;
+        border: 1px solid #29ABE2;
+        background-color: #29ABE2;
+        border-radius: 3px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .contact__name__box {
+        gap: 16px;
+    }
+
+    .contacts__profilebadge__big {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    .contact__name__bigtext {
+        font-size: 40px;
+    }
+
+    .add__contact__overlay {
+        gap: 0px;
+    }
+
+    .add__contact__overlay__right {
+        padding: 48px 16px 32px 16px;
+    }
+
+    .add__contact__container {
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .add__contact__inputbox {
+        width: min(100%, 300px);
+        min-width: unset;
+    }
+
+    .add__contact__buttonbox {
+        gap: 16px;
+        left: 40px;
+    }
+
+    .edit__contact__buttonbox {
+        gap: 16px;
+        left: 24px;
+    }
+}
+
+@media(max-width: 900px) {
+    main {
+        gap: 8px;
+    }
+
+    .contact__overview__header {
+        gap: 8px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .contact__name__box {
+        gap: 8px;
+    }
+
+    .contact__name__bigtext {
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 768px) {
+    main {
+        gap: 0px;
+        margin-top: 80px;
+        max-height: calc(100vh - 80px);
+        width: min(100%, 768px);
+        flex-direction: unset;
+    }
+
+    .contacts__table {
+        width: min(100%, 768px);
+        z-index: 0;
+        padding: 24px 36px;
+        box-shadow: unset;
+        margin-bottom: 80px;
+    }
+
+    .add__contact__button__container {
+        display: none;
+    }
+
+    .contact__overview {
+        display: none;
+        width: min(100%, 768px);
+        height: 100%;
+        padding-inline: 32px;
+        gap: 32px;
+    }
+
+    .contacts__lettertext {
+        width: unset;
+        padding: 16px 32px;
+    }
+
+    .contact {
+        width: unset;
+        padding: 16px 32px;
+    }
+
+    .add__contact__button__mobile {
+        display: flex;
+    }
+
+    .contact__overview__header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 48px;
+        gap: 16px;
+    }
+
+    .contact__overwiev__content {
+        gap: 24px;
+    }
+
+    h1 {
+        font-size: 47px;
+        font-weight: 700;
+    }
+
+    .contact__overview__header__seperator {
+        display: none;
+    }
+
+    .contact__overview__header__seperator__mobile {
+        display: block;
+        width: 90px;
+        border-radius: 3px;
+        height: 2px;
+        order: 1px solid #29ABE2;
+        background-color: #29ABE2;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .contact__name__box {
+        gap: 20px;
+    }
+
+    .contacts__profilebadge__big {
+        width: 80px;
+        height: 80px;
+        font-size: 27px;
+        font-weight: 400;
+    }
+
+    .contact__name__bigtext {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .contact__buttons__container {
+        display: none;
+    }
+
+    .add__and__edit__fly__in {
+        display: flex;
+        flex-direction: column;
+        width: 116px;
+        height: 100px;
+        border-radius: 20px 20px 0px 20px;
+        background-color: white;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        position: fixed;
+        bottom: 106px;
+        right: -300px;
+        padding: 10px;
+        transition: transform 125ms ease-in-out;
+    }
+
+    .add__and__edit__fly__in__active {
+        transform: translateX(-308px);
+    }
+
+    .add__and__edit__fly__in button {
+        width: 96px;
+        height: 40px;
+        border-radius: 8px;
+    }
+
+    .add__and__edit__fly__in button:active {
+        background-color: #EEEEEE;
+        color: #29ABE2;
+    }
+
+    .add__contact__overlay {
+        flex-direction: column;
+        width: 396px;
+        height: 760px;
+    }
+
+    .add__contact__overlay__left {
+        width: 100%;
+        border-radius: 26px 26px 0px 0px;
+        height: 352px;
+        justify-content: flex-start;
+        padding: 32px 16px;
+    }
+
+    .add__contact__overlay__left__content {
+        gap: 8px;
+        margin-bottom: 60px;
+    }
+
+    .add__contact__overlay__left__content img {
+        display: none;
+    }
+
+    .add__contact__overlay__right {
+        width: 100%;
+        padding: 0px 16px 32px 16px;
+        height: 408px;
+        gap: 0px;
+    }
+
+    .close__button__box {
+        display: none;
+    }
+
+    .add__contact__form {
+        gap: 32px;
+    }
+
+    .add__contact__container {
+        gap: 0px;
+        width: 100%;
+    }
+
+    .default__profilebadge {
+        display: none;
+    }
+
+    .default__profilebadge__mobile {
+        height: 120px !important;
+        display: flex !important;
+        transform: translateX(100%) translateY(-60px);
+    }
+
+    .add__contact__inputbox {
+        gap: 16px;
+    }
+
+    .person__container, .email__container, .phone__container {
+        height: 41px;
+    }
+
+    .add__contact__buttonbox {
+        position: unset;
+        justify-items: center;
+    }
+
+    .cancel__button {
+        display: none;
+    }
+
+    .create__contact__button {
+        height: 51px;
+        width: 202px;
+    }
+
+    .contacts__profilebadge__big__mobile {
+        height: 120px !important;
+        width: 120px !important;
+        display: flex !important;
+        font-size: 47px;
+        font-weight: 500;
+        transform: translateX(100%) translateY(-60px);
+    }
+
+    .contacts__profilebadge__big__mobile__dnone {
+        display: none;
+    }
+
+    .edit__contact__buttonbox, .edit__current__user__buttonbox {
+        position: unset;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .delete__button {
+        width: 82px;
+        height: 51px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .save__button, .save__button__current__user {
+        width: 91px;
+        height: 51px;
+        gap: 4px;
+        font-size: 20px;
+    }
+
+    .contact__created__notification {
+        margin-top: 0px;
+        height: 74px;
+        right: 0;
+        top: -3391px;
+        margin-bottom: 32px;
+    }
+
+    .contact__created__notification__active {
+        transform: translateX(0px) translateY(3391px);
+    }
+
+    .contacts__name__box__right {
+        flex: 1;
+    }
+}
+
+@media(max-width: 428px) {
+    .contacts__table {
+        padding: 24px;
+    }
+
+    .contacts__lettertext {
+        width: unset;
+        padding: 16px 16px;
+    }
+
+    .contact {
+        padding-left: 16px;
+        padding-right: 0px;
+        gap: 24px;
+    }
+
+    h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .contact__overview {
+        padding-inline: 16px;
+    }
+}
+
+@media(max-width: 350px) {
+    .default__profilebadge__mobile, .contacts__profilebadge__big__mobile {
+        transform: translateX(60%) translateY(-60px);
+    }
+
+    .add__contact__overlay__left {
+        padding: 16px 8px;
+    }
+
+    .add__contact__overlay__right {
+        padding: 0px 8px 16px 8px;
+    }
+
+    .contact__created__notification {
+        width: 290px;
+    }
+}

@@ -1,0 +1,104 @@
+@media(max-width: 1279px) {
+}
+
+@media(max-width: 768px) {
+    .header__container {
+        position: relative;
+        flex-direction: row;
+    }
+
+    .header__container h3 {
+        display: block;
+    }
+}
+
+@media(max-width: 650px) {
+    main {
+        margin-bottom: 64px;
+    }
+
+    .login__container {
+        height: 475px;
+        margin-bottom: 64px;
+    }
+
+    .login__buttonbox {
+        gap: 21px;
+        flex-direction: column;
+    }
+
+    .login__button {
+        width: 180px;
+        height: 51px;
+    }
+
+    .guestlogin__button {
+        width: 180px;
+        height: 51px;
+    }
+
+    .header__buttonbox {
+        display: none;
+    }
+
+    .header__buttonbox__mobile {
+        display: flex;
+        gap: 32px;
+    }
+}
+
+@media(max-width: 428px) {
+    .move__to__corner {
+        transform: translate(calc(-50% + 30px), calc(-50% + 5px)) scale(0.2336);
+    }
+
+    .login__logocontainer img {
+        height: 78px;
+        width: 64px;
+    }
+
+    .header__buttonbox__mobile {
+        display: flex;
+        gap: 16px;
+    }
+
+    .login__container {
+        margin-top: 32px;
+        padding: 32px 16px;
+    }
+
+    .login__seperator {
+        width: 88px;
+    }
+
+    h1 {
+        font-size: 47px;
+    }
+
+    .login__button {
+        font-size: 16px;
+    }
+
+    .guestlogin__button {
+       font-size: 16px;
+    }
+
+    main {
+        padding-inline: 16px;
+        margin-top: 32px;
+    }
+
+    .person__container, .email__container, .password__container {
+        height: 50px;
+    }
+
+    .signup__button {
+        height: 49px;
+        font-size: 16px;
+        width: 106px;
+    }
+
+    .footer__container {
+        gap: 16px;
+    }
+}

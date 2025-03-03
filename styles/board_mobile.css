@@ -1,0 +1,355 @@
+.dragging__mobile {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 1000;
+}
+
+.dragging__mobile, .task-element {
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+@media(max-width: 1450px) {
+    main {
+        padding-inline: 32px;
+        height: unset;
+        position: unset;
+        max-height: unset;
+    }
+
+    .content__right {
+        position: unset;
+    }
+
+    .add__task__overlay {
+        padding: 32px;
+    }
+
+    .board__content {
+        flex-direction: column;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .board__content__container {
+        position: relative;
+        flex: 0 0 auto;
+        width: min(100%, calc(1279px - clamp(172px, 17vw, 232px)));
+        gap: 16px;
+    }
+
+    .column__content {
+        flex-direction: row;
+        min-height: 0;
+        max-height: unset;
+        overflow-x: scroll;
+        padding: 16px;
+    }
+
+    .board__card {
+        width: 252px;
+    }
+
+    .board__header__right {
+        gap: 16px;
+    }
+
+    .open__add__task__button {
+        display: none;
+    }
+
+    .open__add__task__button__mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background-color: #2A3647;
+        border-radius: 10px;
+        transition: background-color 125ms ease-in, box-shadow 125ms;
+    }
+
+    .open__add__task__button__mobile:hover {
+        background-color: #29ABE2;
+        box-shadow: 0 4px 4px  #00000040;
+    }
+      
+    .open__add__task__button__mobile:active {
+        background-color: #091931;
+        box-shadow: 0 4px 4px  #00000040;
+    }
+    
+    .add__task__form {
+        margin-bottom: 0px;
+        width: min(100%, 1007px);
+    }
+
+    h1 {
+        margin-top: 0px;
+        font-size: 61px;
+    }
+
+    .input__boxes {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .add__task__seperator {
+        display: block;
+    }
+
+    .dropdown__list__wrapper {
+        width: min(100%, 440px);
+        position: absolute;
+    }
+
+    .add__task__right {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .radio__container {
+        justify-content: space-between;
+    }
+
+    .radio {
+        width: 100%;
+    }
+
+    .added__subtasks__container {
+        max-height: 124px;
+        height: 124px;
+        gap: 4px;
+    }
+
+    .subtask__item {
+        height: 32px;
+    }
+
+    .subtask__item__edited {
+        height: 32px;
+    }
+
+    .is__required__text {
+        display: block;
+    }
+
+    .is__required__text__mobile {
+        display: none;
+    }
+
+    .text__and__buttons {
+        justify-content: space-between;
+        width: unset;
+        background-color: transparent;
+        padding: 0px;
+    }
+
+    .edit__and__delete__subtask__box {
+        display: none;
+    }
+
+    .choosen__contacts__container {
+        max-height: 90px;
+        height: 90px;
+    }
+}
+
+@media(max-width: 768px) {
+    main {
+        max-height: none;
+        flex: 1;
+        margin-bottom: 160px;
+        gap: 32px;
+        margin-top: 120px !important;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .searchbar__container {
+        display: none;
+    }
+
+    .searchbar__container__mobile {
+        display: flex;
+    }
+
+    .board__content__container {
+        gap: 0px;
+    }
+
+    .column__title {
+        font-size: 27px;
+    }
+
+    .column__button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .column__button img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .task__details__overlay {
+        width: min(100%, 396px);
+        max-height: 800px;
+        padding: 32px 24px;
+        gap: 16px;
+    }
+
+    .card__category__big {
+        height: 27px;
+        font-size: 16px;
+        padding: 4px 16px;
+    }
+
+    .technical__task__big {
+        width: min(100%, 146px);
+    }
+
+    .user__story__big {
+        width: min(100%, 114px);
+    }
+
+    .details__title {
+        font-size: 36px;
+        font-weight: 700;
+        max-height: 132px;
+    }
+
+    .details__description {
+        font-size: 16px;
+        font-weight: 400;
+        max-height: 40px;
+    }
+
+    .details__text__center__left {
+        font-size: 16px;
+        font-weight: 400;
+        width: min(100%, 73px);
+    }
+
+    .details__text__center__right {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: inherit;
+    }
+
+    .details__priority {
+        font-size: 16px;
+    }
+
+    .details__assigned__to__header {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .edit__contact__button {
+        width: min(100%, 62px);
+    } 
+
+    .details__subtasks__text {
+        height: 20px;
+    }
+
+    .edit__task__form {
+        width: min(100%, 396px);
+        max-height: 800px;
+        padding: 32px 24px;
+        gap: 16px;
+    }
+
+    .text__and__buttons__edit {
+        bottom: 0px;
+        padding: 8px;
+    }
+
+    .input__container input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .input__container textarea {
+        height: 88px;
+        font-size: 16px;
+    }
+
+    .dropdown__toggle {
+        height: 48px;
+    }
+
+    .date__container {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .date__container input {
+        font-size: 16px;
+    }
+
+    .radio {
+        height: 41px;
+    }
+
+    .radio__container {
+        gap: 8px;
+    }
+
+    .subtasks__mobile__container {
+        height: 48px;
+    }
+
+    .subtasks__mobile__container input::placeholder {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 428px) {
+    main {
+        padding-inline: 16px;
+    }
+
+    h1 {
+        font-size: 47px;
+        font-weight: 700;
+    }
+
+    .open__add__task__button__mobile {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 400px) {
+    main {
+        padding-inline: 16px;
+    }
+
+    .edit__task__form {
+        padding: 16px 8px;
+    }
+
+    .radio h3 {
+        font-size: 14px;
+    }
+
+    .radio__container {
+        flex-wrap: wrap;
+    }
+
+    .add__task__right {
+        min-width: 200px;
+    }
+
+}

@@ -1,0 +1,395 @@
+#overlay {
+    background-color: #F6F7F8;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+}
+
+.biglogo__div {
+    background: transparent;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 2000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1), opacity 1s ease-out;
+}
+
+.big__logo {
+    width: 274px;
+    height: auto;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+.move__to__corner {
+    transform-origin: center;
+    top: 64px;
+    left: clamp(32px, 6vw, 64px);
+    position: fixed;
+    pointer-events: none;
+    transform: translate(calc(-50% + 50px), calc(-50% + 30px)) scale(0.364);
+}
+
+header {
+    background: #F6F7F8;
+    display: flex;
+    box-shadow: unset;
+    height: auto;
+    position: unset;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: min(100%, 1920px);
+    margin-top: 32px;
+    margin-inline: auto;
+    padding-inline: clamp(32px, 6vw, 64px);
+}
+
+.login__logocontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#small_logo {
+    opacity: 0;
+}
+
+#small_logo.visible {
+    opacity: 1;
+}
+
+.header__buttonbox {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header__buttonbox__mobile {
+    display: none;
+    align-items: center;
+    gap: 16px;
+}
+
+.notajoinuser__button {
+    background: transparent;
+}
+
+.signup__button {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: #2A3647;
+    border-radius: 8px;
+    padding: 14px 24px;
+    transition: background-color 125ms ease-in, box-shadow 125ms;
+}
+
+.signup__button:hover {
+    background-color: #29ABE2;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.signup__button:active {
+    background-color: #091931;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+main {
+    flex: 1;
+    width: min(100%, 1920px);
+    margin-inline: auto;
+    padding-inline: clamp(16px, 6vw, 64px);
+    margin-top: 16px;
+    margin-bottom: 32px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.login__container {
+    box-shadow: 0px 0px 14px 3px #0000000A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 48px;
+    width: min(652px, 100%);
+    margin-top: 32px;
+}
+
+.login__headlinebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.login__seperator {
+    background-color: #29ABE2;
+    width: 150px;
+    height: 3px;
+}
+
+.login__inputbox {
+    width: min(100%, 422px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.email__container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    background-color: #ffff;
+    padding: 4px 16px 4px 16px;
+}
+
+.email__container:has(.email__input:focus) {
+    border: 1px solid #29ABE2;
+}
+
+.email__container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email__input {
+    min-height: 40px;
+    width: 100%;
+    border-width: 0;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+}
+
+.email__input:focus {
+    outline: none;
+}
+
+.email__input::placeholder {
+    color: #D1D1D1;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.email__logo {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.password__box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.password__container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    background-color: #ffff;
+    padding: 4px 16px 4px 16px;
+}
+
+.password__container:has(.password__input:focus) {
+    border: 1px solid #29ABE2;
+}
+
+.password__container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password__input {
+    min-height: 40px;
+    width: 100%;
+    border-width: 0;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    caret-color: transparent;
+    letter-spacing: 3px;
+}
+
+.password__input:focus {
+    outline: none;
+}
+
+.password__container:has(.password__input:focus) .novisibility__icon {
+    display: block;
+}
+
+.password__container:has(.password__input:focus) .lock__icon {
+    display: none;
+}
+
+.password__input::placeholder {
+    color: #D1D1D1;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: normal;
+}
+
+.lock__icon {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.novisibility__icon {
+    display: none;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.visibility__icon {
+    display: none;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
+
+.login__buttonbox {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.login__button {
+    font-size: 21px;
+    font-weight: 500;
+    color: white;
+    background-color: #2A3647;
+    border-radius: 8px;
+    padding: 14px 24px;
+    transition: background-color 125ms ease-in, box-shadow 125ms;
+}
+
+.login__button:hover {
+    background-color: #29ABE2;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.login__button:active {
+    background-color: #091931;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.guestlogin__button {
+    background: transparent;
+    font-size: 21px;
+    font-weight: 500;
+    color: #2A3647;
+    padding: 14px 24px;
+    border-radius: 8px;
+    border: solid 1px #2A3647;
+    transition: background-color 125ms ease-in, box-shadow 125ms, border 125ms ease-in;
+}
+
+.guestlogin__button:hover {
+    border: solid 1px #29ABE2;
+    color: #29ABE2;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+.guestlogin__button:active {
+    border: solid 1px #091931;
+    color: #091931;
+    box-shadow: 0 4px 4px  #00000040;
+}
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 60px;
+}
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.notices__button {
+    font-size: 16px;
+    font-weight: 400;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #A8A8A8;
+    transition: color 125ms, font-weight 75ms ease-in;
+}
+
+.notices__button:hover {
+    color: #29ABE2;
+    font-weight: 700;
+}
+
+.leftfooter__button {
+    width: 123px;
+}
+
+.rightfooter__button {
+    width: 107px;
+}
+
+.error__inputs {
+    border: 1px solid #FF001F !important;
+    animation: shake 0.3s ease-in-out;
+}
+
+.errormessage__box {
+    font-size: 13px;
+    font-weight: 400;
+    color: #FF8190;
+    height: 16px;
+}
+
