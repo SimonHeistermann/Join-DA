@@ -20,18 +20,18 @@ Join is a web app built with **HTML, CSS, JavaScript, Git, and Firebase**. It is
 git clone https://github.com/YOUR_USERNAME/Join.git
 cd Join
 
-### 2️⃣ Install Dependencies (if needed)
+2️⃣ Install Dependencies (if needed)
 npm install
 
-### 3️⃣ Start the App
+3️⃣ Start the App
 Simply open index.html in your browser or use a local development server like:
 npx live-server
 
 ## 🌍 Deployment
 **Join** can be easily deployed using **Firebase Hosting** or any static hosting service like **GitHub Pages** or **Netlify**.
 
-## 🤝 Contributing
+🤝 Contributing
 Feel free to **fork** this repository, **submit issues**, or **open pull requests** to improve the project!
 
-## 📜 License
+📜 License
 This project is licensed under the **MIT License**.
