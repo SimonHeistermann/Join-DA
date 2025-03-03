@@ -26,13 +26,13 @@ npm install
 3️⃣ Start the App
 Simply open index.html in your browser or use a local development server like:
 npx live-server
-```bash
+```
 
 ## 🌍 Deployment
 **Join** can be easily deployed using **Firebase Hosting** or any static hosting service like **GitHub Pages** or **Netlify**.
 
-🤝 Contributing
+## 🤝 Contributing
 Feel free to **fork** this repository, **submit issues**, or **open pull requests** to improve the project!
 
-📜 License
+## 📜 License
 This project is licensed under the **MIT License**.
