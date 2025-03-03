@@ -15,8 +15,8 @@ Join is a web app built with **HTML, CSS, JavaScript, Git, and Firebase**. It is
 
 ## 📌 Getting Started  
 
-### 1️⃣ Clone the Repository  
 ```bash
+1️⃣ Clone the Repository  
 git clone https://github.com/YOUR_USERNAME/Join.git
 cd Join
 
@@ -26,6 +26,7 @@ npm install
 3️⃣ Start the App
 Simply open index.html in your browser or use a local development server like:
 npx live-server
+```bash
 
 ## 🌍 Deployment
 **Join** can be easily deployed using **Firebase Hosting** or any static hosting service like **GitHub Pages** or **Netlify**.
