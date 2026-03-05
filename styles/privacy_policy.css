@@ -81,6 +81,34 @@
     top: 4px;
 }
 
+.privacy__policy__section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.privacy__policy__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.privacy__policy__table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+.privacy__policy__table tr:first-child td {
+    border-bottom: 2px solid #29ABE2;
+}
+
+.privacy__policy__table tr:last-child td {
+    border-bottom: none;
+}
+
 a {
     color: #29ABE2;
     font-weight: 600;

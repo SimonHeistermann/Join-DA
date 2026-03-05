@@ -60,6 +60,14 @@
     margin-right: 8px;
 }
 
+.legal__notice__section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
 a {
     color: #29ABE2;
     font-weight: 600;
@@ -70,6 +78,16 @@ a {
 
 a:hover {
     color: #2179a3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.da__link {
+    color: black !important; 
+}
+
+.da__link:hover {
+    color: #2179a3 !important;
     text-decoration: underline;
     cursor: pointer;
 }

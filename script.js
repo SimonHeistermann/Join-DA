@@ -3,7 +3,7 @@ let contacts = [];
 let users = [];
 let currentUser;
 let lastPage;
-const BASE_URL = "https://backenjoin-default-rtdb.europe-west1.firebasedatabase.app/";
+const BASE_URL = "https://backendjoin-67278-default-rtdb.europe-west1.firebasedatabase.app/";
 
 
 /**
